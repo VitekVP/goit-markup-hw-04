@@ -35,8 +35,18 @@
           </ul>
         </nav>
         <div class="header-group">
-          <a href="mailto:info@devstudio.com" class="link-contacts">info@devstudio.com</a>
-          <a href="tel:+380961111111" class="link-contacts">+38 096 111 11 11</a>
+          <a href="mailto:info@devstudio.com" class="link-contacts">
+            <svg class="icon-contacts" width="16px" height="12px">
+              <use href="./images/icons.svg#icon-envelope"></use>
+            </svg>
+            info@devstudio.com</a
+          >
+          <a href="tel:+380961111111" class="link-contacts">
+            <svg class="icon-contacts" width="10px" height="16px">
+              <use href="./images/icons.svg#icon-smartphone"></use>
+            </svg>
+            +38 096 111 11 11</a
+          >
         </div>
       </div>
     </header>
@@ -53,8 +63,8 @@
             <li><button class="filter-button" type="button">Маркетинг</button></li>
           </ul>
           <!-- Проекти -->
-          <ul class="project-list card-set list">
-            <li>
+          <ul class="project-list list">
+            <li class="card">
               <div class="card-project">
                 <img src="./images/techno.jpg" alt="вебсайт технокряк" width="370" height="294" />
                 <div class="name-project">
@@ -63,7 +73,7 @@
                 </div>
               </div>
             </li>
-            <li>
+            <li class="card">
               <div class="card-project">
                 <img
                   src="./images/basket.jpg"
@@ -80,7 +90,7 @@
                 </div>
               </div>
             </li>
-            <li>
+            <li class="card">
               <div class="card-project">
                 <img
                   src="./images/seafood.jpg"
@@ -97,7 +107,7 @@
                 </div>
               </div>
             </li>
-            <li>
+            <li class="card">
               <div class="card-project">
                 <img
                   src="./images/prime.jpg"
@@ -114,7 +124,7 @@
                 </div>
               </div>
             </li>
-            <li>
+            <li class="card">
               <div class="card-project">
                 <img
                   src="./images/boxes.jpg"
@@ -131,7 +141,7 @@
                 </div>
               </div>
             </li>
-            <li>
+            <li class="card">
               <div class="card-project">
                 <img
                   src="./images/borders.jpg"
@@ -145,7 +155,7 @@
                 </div>
               </div>
             </li>
-            <li>
+            <li class="card">
               <div class="card-project">
                 <img
                   src="./images/limited-edition.jpg"
@@ -162,7 +172,7 @@
                 </div>
               </div>
             </li>
-            <li>
+            <li class="card">
               <div class="card-project">
                 <img
                   src="./images/lab.jpg"
@@ -179,7 +189,7 @@
                 </div>
               </div>
             </li>
-            <li>
+            <li class="card">
               <div class="card-project">
                 <img
                   src="./images/busines.jpg"
@@ -198,31 +208,90 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="container">
-        <!-- prettier-ignore -->
-        <a href="" lang="en" class="logo">Web<span class="logo-footer">Studio</span></a>
-        <address>
-          <ul class="list">
-            <li class="addresse">
+      <div class="container footer-container">
+        <div class="footer-addresse">
+          <!-- prettier-ignore -->
+          <a href="" lang="en" class="logo">Web<span class="logo-footer">Studio</span></a>
+          <address>
+            <ul class="list">
+              <li class="addresse">
+                <a
+                  href="https://goo.gl/maps/GXKJQdvFJzr9G8gM8"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  class="link-addresse-footer"
+                >
+                  м. Київ, бульвар Лесі Українки, 26
+                </a>
+              </li>
+              <li class="addresse">
+                <a href="mailto:info@devstudio.com" class="link-contacts-footer"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="addresse">
+                <a href="tel:+380961111111" class="link-contacts-footer">+38 096 111 11 11</a>
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="footer-socials">
+          <h3 class="subtitle subtitle-footer">приєднуйтесь</h3>
+          <ul class="socials list">
+            <li class="social-item">
               <a
-                href="https://goo.gl/maps/GXKJQdvFJzr9G8gM8"
+                class="social-link social-link-footer link"
+                href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                class="link-addresse-footer"
+                aria-label="Іконка інстаграм"
               >
-                м. Київ, бульвар Лесі Українки, 26
+                <svg class="social-icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
               </a>
             </li>
-            <li class="addresse">
-              <a href="mailto:info@devstudio.com" class="link-contacts-footer"
-                >info@devstudio.com</a
+            <li class="social-item">
+              <a
+                class="social-link social-link-footer link"
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                aria-label="Іконка твітер"
               >
+                <svg class="social-icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
             </li>
-            <li class="addresse">
-              <a href="tel:+380961111111" class="link-contacts-footer">+38 096 111 11 11</a>
+            <li class="social-item">
+              <a
+                class="social-link social-link-footer link"
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                aria-label="Іконка фейсбук"
+              >
+                <svg class="social-icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-item">
+              <a
+                class="social-link social-link-footer link"
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                aria-label="Іконка лінкедін"
+              >
+                <svg class="social-icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
             </li>
           </ul>
-        </address>
+        </div>
       </div>
     </footer>
   </body>

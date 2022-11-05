@@ -6,6 +6,9 @@
 /* колір контактів футера rgba(255, 255, 255, 0.6); */
 /* колір логотип, кнопка, підсвітка #2196F3*/
 /* колір кнопка герой-активна #188CE8 */
+/* колір фону героя #c4c4c4 */
+/* колір градієнта #2f303a66 */
+/* колір іконок клієнтів #AFB1B8 */
 
 /* призначення змінних */
 :root {
@@ -16,9 +19,12 @@
   --logo-web: #2196f3;
   --logo-header: #000000;
   --hero-footer-bgc: #2f303a;
-  --contacts-footer-colors: rgba(255, 255, 255, 0.6);
+  --contacts-footer-colors: #ffffff99;
   --secondary-bgc: #f5f4fa;
   --button-activ-color: #188ce8;
+  --hero-bgc: #c4c4c4;
+  --hero-gradient: #2f303a66;
+  --client-link-color: #afb1b8;
   /* відступ у сітках */
   --indent: 30px;
 }
@@ -129,13 +135,21 @@ img {
 
 /* ссилки на пошту і телефон */
 .link-contacts {
-  color: var(--primary-text-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
 
   font-weight: 500;
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   text-decoration: none;
+
+  color: var(--primary-text-color);
+}
+
+.icon-contacts {
+  fill: currentColor;
 }
 
 .link-contacts:hover,
@@ -163,7 +177,7 @@ img {
 
 .header-link,
 .link-contacts {
-  display: block;
+  /* display: block; */
   padding-top: 32px;
   padding-bottom: 31px;
 }
@@ -171,12 +185,18 @@ img {
 /* HERO */
 
 .hero-section {
-  background-color: var(--hero-footer-bgc);
+  max-width: 1600px;
+  height: 600px;
   text-align: center;
-
   padding: 200px 0;
-}
 
+  background-color: var(--hero-bgc);
+  background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)),
+    url(../images/img-bgi.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 .hero-title {
   color: var(--basic-white-color);
 
@@ -204,7 +224,7 @@ img {
   width: 216px;
   height: 50px;
   padding: 10px 26px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 4px #00000026;
   border-radius: 4px;
 }
 
@@ -238,7 +258,7 @@ img {
 
 /* Особливості роботи */
 
-.feature-title {
+.subtitle {
   color: var(--title-text-color);
 
   font-weight: 700;
@@ -248,6 +268,18 @@ img {
   text-transform: uppercase;
 
   margin-bottom: 10px;
+}
+
+.feature-item {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+
+  background-color: var(--secondary-bgc);
+  border-radius: 4px;
 }
 
 .feature-text {
@@ -289,10 +321,11 @@ img {
 }
 
 .team-text {
+  margin-bottom: 16px;
+
   font-weight: 400;
   font-size: 16px;
   line-height: calc(19 / 16);
-
   text-align: center;
   letter-spacing: 0.03em;
 }
@@ -318,6 +351,66 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
 
   flex-basis: calc((100%- (var(--items)-1) * var(--indent))) / var(--items);
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  background-color: var(--basic-white-color);
+  color: #afb1b8;
+}
+
+.social-icon {
+  fill: currentColor;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: #2196f3;
+  color: var(--basic-white-color);
+}
+
+/* Постійні клієнти */
+
+.clients-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+
+  border: 1px solid var(--client-link-color);
+  border-radius: 4px;
+
+  color: var(--client-link-color);
+}
+
+.client-icon {
+  fill: currentColor;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  color: var(--logo-web);
 }
 
 /* FOOTER */
@@ -362,7 +455,26 @@ address {
   color: var(--logo-web);
 }
 
+.subtitle-footer {
+  margin-bottom: 20px;
+
+  color: var(--basic-white-color);
+}
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-addresse {
+  margin-right: 70px;
+}
+
+.social-link-footer {
+  background-color: #ffffff1a;
+}
+
 /* Портфоліо */
+
 .filter-button {
   color: var(--title-text-color);
   background-color: var(--secondary-bgc);
@@ -411,9 +523,6 @@ address {
 .name-project {
   width: 370px;
   padding: 20px 24px 19px;
-  border-right: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
 }
 
 .text-project {
@@ -426,9 +535,19 @@ address {
   display: flex;
   flex-wrap: wrap;
   gap: var(--indent);
+
   --items: 3;
 }
 
-.card-project {
+.project-list > .card {
   flex-basis: calc((100%- (var(--items)-1) * var(--indent))) / var(--items);
+}
+
+.card-project {
+  border: 1px solid #eeeeee;
+}
+
+.card-project:hover,
+.card-project:focus {
+  box-shadow: 0px 1px 1px #0000001f, 0px 4px 4px #0000000f, 1px 4px 6px #00000029;
 }
