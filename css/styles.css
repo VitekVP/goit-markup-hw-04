@@ -187,8 +187,10 @@ img {
 .hero-section {
   max-width: 1600px;
   height: 600px;
-  text-align: center;
   padding: 200px 0;
+  margin: 0 auto;
+
+  text-align: center;
 
   background-color: var(--hero-bgc);
   background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)),
@@ -426,6 +428,8 @@ img {
 .clients-link:hover,
 .clients-link:focus {
   color: var(--logo-web);
+
+  border: 1px solid var(--logo-web);
 }
 
 /* FOOTER */
@@ -491,11 +495,15 @@ address {
   background-color: #ffffff1a;
 }
 
+.social-link-footer > .social-icon {
+  fill: var(--basic-white-color);
+}
+
 /* Портфоліо */
 
 .filter-button {
   height: 38px;
-  padding: 6px 22px;
+  padding: 0 22px;
 
   font-family: 'Roboto';
   font-style: normal;
